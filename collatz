@@ -1,5 +1,7 @@
 def collatz(number):
-    if number % 2 == 0:
+    if number == 0:
+        return "No zero"
+    elif number % 2 == 0:
         print(number // 2)
         return number // 2
     else:
@@ -8,12 +10,14 @@ def collatz(number):
         return result
 
 
-mynum = input("Give me a number: ") 
+mynum = input("Give me a number above 0: ") 
 while True:       
     try:            
         while mynum != 1:
             mynum = collatz(int(mynum))
+            
         print("Done")
         break        
-    except ValueError:
-        print("You must enter positive integer")
+    except (ValueError) as e:
+        print("Number should be above 0 \nDone")
+        break
