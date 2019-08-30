@@ -1,0 +1,19 @@
+def collatz(number):
+    if number % 2 == 0:
+        print(number // 2)
+        return number // 2
+    else:
+        result = 3 * number + 1
+        print(result)
+        return result
+
+
+mynum = input("Give me a number: ") 
+while True:       
+    try:            
+        while mynum != 1:
+            mynum = collatz(int(mynum))
+        print("Done")
+        break        
+    except ValueError:
+        print("You must enter positive integer")
