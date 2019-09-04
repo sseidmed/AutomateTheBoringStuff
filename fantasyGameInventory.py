@@ -40,8 +40,8 @@ def addToInventory(inventory, addedItems):
      
 
 
-inv = {'gold coin': 42, 'rope': 10} #player's original inv
-dragonLoot = ['ruby', 'ruby', 'ruby', 'ruby', 'ruby', 'ruby', 'ruby', 'ruby', 'gold coin', 'dagger', 'dagger', 'dagger', 'gold coin', 'gold coin', 'gold coin', 'gold coin'] #new items
+inv = {'gold coin': 42, 'rope': 1} #player's original inv
+dragonLoot = ['ruby', 'dagger', 'dagger', 'dagger', 'gold coin', 'gold coin', 'gold coin'] #new items
 
 inv = addToInventory(inv, dragonLoot) #assign the results of my second function to inv
 displayInventory(inv) #run my first function on a new result
@@ -55,7 +55,7 @@ Inventory:
 45 gold coin
 1 rope
 1 ruby
-1 dagger
+3 dagger
 
-Total number of items: 48
+Total number of items: 50
 '''
