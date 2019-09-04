@@ -32,14 +32,9 @@ displayInventory(stuff)
 def addToInventory(inventory, addedItems):
     # your code goes here
     print("\n")
-    
     for k, v in inventory.items():
-      for i in addedItems:
-        if i == k:
-          inventory[k]+=1
-        else:
-          inventory[i] = addedItems.count(i)
-    
+      for i in addedItems:        
+          inventory[i] = inventory.get(i, 0) + 1           
       return inventory
     
      
