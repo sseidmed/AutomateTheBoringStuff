@@ -23,7 +23,7 @@ def hd_imageDownloader(word, folder):
 				soup = bs4.BeautifulSoup(res.text, 'html.parser')
 				bigImage = soup.select('.js-photo-page-image-img')
 				bigPicSrc = bigImage[0].get('src')
-				imageName = word + str(i) + '.jpeg'
+				imageName = word + str(i+1) + '.jpeg'
 				print('\nDownloading image %s...' % (imageName) + '\n')
 				res = requests.get(bigPicSrc)
 				res.raise_for_status()
